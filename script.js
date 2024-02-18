@@ -86,6 +86,9 @@ applyButton.addEventListener('click',() => {
     const couponElement = document.getElementById('hs-trailing-button-add-on').value;
     const couponCode =couponElement.split(' ').join('').toUpperCase();
     console.log(couponCode);
+
+    document.getElementById('hs-trailing-button-add-on').style.display = 'none';
+    document.getElementById('apply-button').style.display = 'none';
     if (counter >= 2) {
         if (couponCode == "NEW15") {
             const discountElement = document.getElementById('discount-cost');
@@ -93,12 +96,19 @@ applyButton.addEventListener('click',() => {
             // console.log(discounAmount);
             discountElement.innerText=discounAmount.toFixed(2);
 
+
+            const afterDiscountPrice = document.getElementById('after-discount');
+            afterDiscountPrice.innerText=finalCost - discounAmount.toFixed(2)
+
             
         }else if(couponCode == "COUPLE20") {
             const discountElement = document.getElementById('discount-cost-2');
             const discounAmount =finalCost * 0.2;
             // console.log(discounAmount);
             discountElement.innerText=discounAmount.toFixed(2);
+
+            const afterDiscountPrice = document.getElementById('after-discount');
+            afterDiscountPrice.innerText=finalCost - discounAmount.toFixed(2)
 
         }else{
             alert('invalid coupon');
@@ -109,8 +119,10 @@ applyButton.addEventListener('click',() => {
     }
     
 
+
+
 });
-// another section end
+
 
 
 
@@ -120,3 +132,29 @@ applyButton.addEventListener('click',() => {
     });
 }
 
+const finalShowPic = document.getElementById('model');
+finalShowPic.addEventListener('click',() => {
+    const buttonCard = document.getElementById('banner-card').classList;
+    buttonCard.remove('hidden');
+    // console.log(buttonCard);
+
+
+});
+
+
+const finalShowPic1 = document.getElementById('banner-card');
+finalShowPic.addEventListener('click',() => {
+    const buttonCard = document.getElementById('main-div').classList;
+    buttonCard.add('hidden');
+    // console.log(buttonCard);
+
+
+});
+const finalShowPic2 = document.getElementById('continue-id');
+finalShowPic.addEventListener('click',() => {
+    const buttonCard = document.getElementById('continue-id').classList;
+    buttonCard.remove('hidden');
+    // console.log(buttonCard);
+
+
+});
