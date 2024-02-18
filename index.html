@@ -45,7 +45,8 @@
           <div class="max-w-md">
             <h1 class="mb-5 text-5xl font-bold w-full">End-to-End Travel with <br><span class="text-[#1DD100]">CDM Paribahan</span></h1>
             <p class="mb-5">Determine your starting point and destination.check if CDM Paribahan serves your intended route. You can do this by visiting their official website or contacting them directly.</p>
-            <button class="btn btn-primary bg-[#1DD100] text-black border-0">Get Started</button>
+            <button class="btn btn-primary bg-[#1DD100] text-black border-0"><a href="#cdm-paribahan">Buy Ticket</a>
+            </button>
           </div>
 
         </div>
@@ -88,9 +89,7 @@
     </div>
     <!-- extra card -->
 
-        </div>
-          
-        </div>
+        
 
         
       </div>
@@ -154,7 +153,7 @@
   
 
 </main>
-<main class=" bg-[#F7F8F8] mt-16">
+<main id="cdm-paribahan" class=" bg-[#F7F8F8] mt-16">
     <section class="container mx-auto px-2 lg:px-24" >
         <div class="main-div">
             <!-- <div> -->
@@ -238,26 +237,26 @@
                    
                 </div>
                 <hr>
-                <div class="bg-white">
+                <div onclick="" id="myButton" class=" bg-white">
                     <!-- seat -->
                     <div class="flex justify-end pr-14 pt-16">
                         <kbd class="kbd"><img src="./wheel.png" alt=""></kbd>
                     </div>
                    <div class="flex  justify-around pt-16">
-                    <h1 class="text-2xl font-bold">A</h1>
-                    <kbd class="kbd">A1</kbd>
-                        <kbd class="kbd">A2</kbd>
-                        <kbd class="kbd">A3</kbd>
-                        <kbd class="kbd">A4</kbd> 
+                    <h1 class="text-2xl font-bold disabled">A</h1>
+                    <kbd  class="kbd">A1</kbd>
+                        <kbd  class="kbd">A2</kbd>
+                        <kbd  class="kbd">A3</kbd>
+                        <kbd  class="kbd">A4</kbd> 
                    </div>
 
 
                    <div class="flex  justify-around pt-16">
                     <h1 class="text-2xl font-bold">B</h1>
-                    <kbd class="kbd">B1</kbd>
-                        <kbd class="kbd">B2</kbd>
-                        <kbd class="kbd">B3</kbd>
-                        <kbd class="kbd">B4</kbd> 
+                    <kbd  class="kbd">B1</kbd>
+                        <kbd  class="kbd">B2</kbd>
+                        <kbd  class="kbd">B3</kbd>
+                        <kbd  class="kbd">B4</kbd> 
                    </div>
                     
                         
@@ -274,20 +273,33 @@
 
                 <div class="bg-[#F7F8F8] w-3/4 m-auto mt-3 rounded-2xl p-8">
                     <div class="flex justify-between pl-5 pr-5 text-xl font-bold pb-3 pt-3">
-                        <p>Seat <span class="bg-[#1DD100] px-2 rounded-xl">0</span></p>
+                        <p>Seat <span id="seat" class="bg-[#1DD100] px-2 rounded-xl">0</span></p>
                         <p>class</p>
                         <p>Price</p>
                     </div>
                     <hr>
-                    <div class="flex justify-between pl-5 pr-5">
-                        <p>C2</p>
+                    <div  class="flex justify-between pl-5 pr-5">
+                        <!-- <p>C2</p>
                         <p>Economy</p>
-                        <p>550</p>
+                        <p>550</p> -->
+                        <div id="added-seat" class="">
+
+                        </div>
                     </div>
                     <div class="flex justify-between mt-5 pl-5 pr-5 pb-3">
-                        <p>C2</p>
+                        <!-- <p>C2</p>
                         <p>Economy</p>
-                        <p>550</p>
+                        <p>550</p> -->
+                    </div>
+                    <div class="flex justify-between mt-5 pl-5 pr-5 pb-3">
+                        <!-- <p>C2</p>
+                        <p>Economy</p>
+                        <p>550</p> -->
+                    </div>
+                    <div class="flex justify-between mt-5 pl-5 pr-5 pb-3">
+                        <!-- <p>C2</p>
+                        <p>Economy</p>
+                        <p>550</p> -->
                     </div>
                     <hr>
                     <div class="flex justify-between pl-5 pr-5 font-bold pb-5 pt-2">
@@ -299,7 +311,7 @@
                         <label for="hs-trailing-button-add-on" class="sr-only">Label</label>
                         <div class="flex rounded-lg shadow-sm">
                           <input type="text" id="hs-trailing-button-add-on" name="hs-trailing-button-add-on" class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
-                          <button type="button" class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-[#1DD100] text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                          <button type="button" class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-[#1DD100] text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" disabled>
                             Apply
                           </button>
                         </div>
@@ -329,7 +341,7 @@
                     </label>
                   </div>
                   <div class="w-3/4 m-auto mt-4">
-                    <button class="btn btn-wide w-full bg-[#1DD100]">Next</button>
+                    <button class="btn btn-wide w-full bg-[#1DD100]" d>Next</button>
                     <p class="text-sm text-slate-400 pt-2"><a href="">term and condition</a></p>
                   </div>
 
