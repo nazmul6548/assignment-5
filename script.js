@@ -1,8 +1,18 @@
 const key = document.querySelectorAll(".kbd");
 let totalSeat =8;
 let counter = 0;
+let clickButtons =0;
 for (const btn of key) {
+    let clickCount = 0;
     btn.addEventListener("click",() => {
+        if (clickButtons >= 4) {
+            alert("You can only select up to 4 seats");
+            return;
+        }
+        if (clickCount >= 1) {
+            btn.disabled=true;
+            return;
+        }
 
 // console.log(btn);
 totalSeat--;
@@ -15,6 +25,8 @@ if (totalSeat === 0) {
     alert('Seats are overbooked!')
     
 }
+btn.style.backgroundColor="#1DD100";
+
 
 
         
@@ -51,14 +63,60 @@ console.log(myinnerText);
         
     const totalcost =document.getElementById('total-cost').innerText;
     const convertedtotalcost =parseInt(totalcost)
-    document.getElementById('total-cost').innerText=convertedtotalcost+convert;
+    // document.getElementById('total-cost').innerText=convertedtotalcost+convert;
+    const totalP =convertedtotalcost;
+    const finalCost =totalP + convert;
+    document.getElementById('total-cost').innerText=finalCost;
+    // return finalCost;
     //    
+
+clickButtons++;
+clickCount++;
+
+
+
+
+
+
+// another section
+const applyButton = document.getElementById('apply-button');
+// console.log(applyButton);
+applyButton.addEventListener('click',() => {
+    // console.log("clicked");
+    const couponElement = document.getElementById('hs-trailing-button-add-on').value;
+    const couponCode =couponElement.split(' ').join('').toUpperCase();
+    console.log(couponCode);
+    if (counter >= 2) {
+        if (couponCode == "NEW15") {
+            const discountElement = document.getElementById('discount-cost');
+            const discounAmount =finalCost * 0.15;
+            // console.log(discounAmount);
+            discountElement.innerText=discounAmount.toFixed(2);
+
+            
+        }else if(couponCode == "COUPLE20") {
+            const discountElement = document.getElementById('discount-cost-2');
+            const discounAmount =finalCost * 0.2;
+            // console.log(discounAmount);
+            discountElement.innerText=discounAmount.toFixed(2);
+
+        }else{
+            alert('invalid coupon');
+        }
+        
+    }else{
+        alert('At least booking 2 seats')
+    }
+    
+
+});
+// another section end
+
+
+
 
 
 
     });
 }
 
-// for (const  of object) {
-    
-// }
