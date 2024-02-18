@@ -224,9 +224,9 @@
        <section class="container mx-auto px-2 lg:px-24 ">
         <div class="flex bg-white rounded-2xl mt-10">
             <div class="left-side w-[60%]">
-                <h1 class="text-xl pb-3 mt-5">Select your seat</h1>
+                <h1 class="text-xl pb-3 mt-5 pl-5">Select your seat</h1>
                 <hr>
-                <div class="flex justify-between pt-3 pb-3">
+                <div class="flex justify-between pt-3 pb-3 pl-5">
                     <div class="flex">
                         <img src="./images/seat-gray.png" alt="">
                         <p class="font-bold"> Avilable</p>
@@ -240,19 +240,25 @@
                 <hr>
                 <div class="bg-white">
                     <!-- seat -->
-                    <div class="grid grid-cols-4 gap-20">
-
-                        <div class="bg-[#F7F8F8] py-10 col-span-1 col-start-4 flex items-center justify-center text-black"><img src="./wheel.png" alt=""></div>
-                        <div class="bg-[#F7F8F8] py-10 text-center text-black">A1</div>
-                        <div class="bg-[#F7F8F8] py-10 text-center text-black">A2</div>
-                        <div class="bg-[#F7F8F8] py-10 text-center text-black">A3</div>
-                        <div class="bg-[#F7F8F8] py-10 text-center text-black">A4</div>
-                        <div class="bg-[#F7F8F8] py-10 text-center text-black">B1</div>
-                        <div class="bg-[#F7F8F8] py-10 text-center text-black">B2</div>
-                        <div class="bg-[#F7F8F8] py-10 text-center text-black">B3</div>
-                        <div class="bg-[#F7F8F8] py-10 text-center text-black">B4</div>
-
+                    <div class="flex justify-end pr-14 pt-16">
+                        <kbd class="kbd"><img src="./wheel.png" alt=""></kbd>
                     </div>
+                   <div class="flex  justify-around pt-16">
+                    <h1 class="text-2xl font-bold">A</h1>
+                    <kbd class="kbd">A1</kbd>
+                        <kbd class="kbd">A2</kbd>
+                        <kbd class="kbd">A3</kbd>
+                        <kbd class="kbd">A4</kbd> 
+                   </div>
+
+
+                   <div class="flex  justify-around pt-16">
+                    <h1 class="text-2xl font-bold">B</h1>
+                    <kbd class="kbd">B1</kbd>
+                        <kbd class="kbd">B2</kbd>
+                        <kbd class="kbd">B3</kbd>
+                        <kbd class="kbd">B4</kbd> 
+                   </div>
                     
                         
                     
@@ -324,7 +330,9 @@
                   </div>
                   <div class="w-3/4 m-auto mt-4">
                     <button class="btn btn-wide w-full bg-[#1DD100]">Next</button>
+                    <p class="text-sm text-slate-400 pt-2"><a href="">term and condition</a></p>
                   </div>
+
                   
                 <!-- input fild -->
 
