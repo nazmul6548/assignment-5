@@ -1,5 +1,5 @@
 const key = document.querySelectorAll(".kbd");
-let totalSeat =8;
+let totalSeat =40;
 let counter = 0;
 let clickButtons =0;
 for (const btn of key) {

@@ -1,1 +1,0 @@
-grid grid-cols-2 items-center 
