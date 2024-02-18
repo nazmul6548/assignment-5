@@ -174,7 +174,7 @@
                                     </div>
                                 </div>
                                 <div class="navbar-end">
-                                    <a class="btn bg-[#1DD1001A] border border-[#1DD100] text-[#1DD100]"><img src="./images/seat-green.png" alt=""> 40 seat left </a>
+                                    <a class="btn bg-[#1DD1001A] border border-[#1DD100] text-[#1DD100]"><img src="./images/seat-green.png" alt=""> <span id="total-seat">8</span> seat left </a>
                                   </div>
     
                                  
@@ -237,10 +237,10 @@
                    
                 </div>
                 <hr>
-                <div onclick="" id="myButton" class=" bg-white">
+                <div  id="myButton" class=" bg-white">
                     <!-- seat -->
                     <div class="flex justify-end pr-14 pt-16">
-                        <kbd class="kbd"><img src="./wheel.png" alt=""></kbd>
+                        <kbd class="bg-gray-400 p-2 rounded-xl"><img src="./wheel.png" alt=""></kbd>
                     </div>
                    <div class="flex  justify-around pt-16">
                     <h1 class="text-2xl font-bold disabled">A</h1>
@@ -276,26 +276,13 @@
                         <p>Seat <span id="seat" class="bg-[#1DD100] px-2 rounded-xl">0</span></p>
                         <p>class</p>
                         <p>Price</p>
+                        
                     </div>
                     <hr>
-                    <div  class="flex justify-between pl-5 pr-5">
-                        <!-- <p>C2</p>
-                        <p>Economy</p>
-                        <p>550</p> -->
-                        <div id="added-seat" class="">
+                    <div id="added-seat" class="">
 
-                        </div>
                     </div>
-                    <div class="flex justify-between mt-5 pl-5 pr-5 pb-3">
-                        <!-- <p>C2</p>
-                        <p>Economy</p>
-                        <p>550</p> -->
-                    </div>
-                    <div class="flex justify-between mt-5 pl-5 pr-5 pb-3">
-                        <!-- <p>C2</p>
-                        <p>Economy</p>
-                        <p>550</p> -->
-                    </div>
+                    
                     <div class="flex justify-between mt-5 pl-5 pr-5 pb-3">
                         <!-- <p>C2</p>
                         <p>Economy</p>
@@ -304,7 +291,7 @@
                     <hr>
                     <div class="flex justify-between pl-5 pr-5 font-bold pb-5 pt-2">
                         <h2>Total Price</h2>
-                        <h2>BDT <span>1000</span></h2>
+                        <h2>BDT <span id="total-cost">0</span></h2>
                     </div>
                      <!-- button -->
                      <div>
@@ -341,7 +328,7 @@
                     </label>
                   </div>
                   <div class="w-3/4 m-auto mt-4">
-                    <button class="btn btn-wide w-full bg-[#1DD100]" d>Next</button>
+                    <button class="btn btn-wide w-full bg-[#1DD100]" disabled>Next</button>
                     <p class="text-sm text-slate-400 pt-2"><a href="">term and condition</a></p>
                   </div>
 
