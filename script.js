@@ -87,14 +87,14 @@ applyButton.addEventListener('click',() => {
     const couponCode =couponElement.split(' ').join('').toUpperCase();
     console.log(couponCode);
 
-    document.getElementById('hs-trailing-button-add-on').style.display = 'none';
-    document.getElementById('apply-button').style.display = 'none';
+  
     if (counter >= 2) {
         if (couponCode == "NEW15") {
             const discountElement = document.getElementById('discount-cost');
             const discounAmount =finalCost * 0.15;
-            // console.log(discounAmount);
-            discountElement.innerText=discounAmount.toFixed(2);
+           
+            
+            discountElement.innerText="Discount Price: " + discounAmount.toFixed(2) + 'tk';
 
 
             const afterDiscountPrice = document.getElementById('after-discount');
@@ -102,10 +102,10 @@ applyButton.addEventListener('click',() => {
 
             
         }else if(couponCode == "COUPLE20") {
-            const discountElement = document.getElementById('discount-cost-2');
+            const discountElement = document.getElementById('discount-cost');
             const discounAmount =finalCost * 0.2;
-            // console.log(discounAmount);
-            discountElement.innerText=discounAmount.toFixed(2);
+            
+            discountElement.innerText="Discount Price: " + discounAmount.toFixed(2) + "tk";
 
             const afterDiscountPrice = document.getElementById('after-discount');
             afterDiscountPrice.innerText=finalCost - discounAmount.toFixed(2)
@@ -113,12 +113,14 @@ applyButton.addEventListener('click',() => {
         }else{
             alert('invalid coupon');
         }
+        document.getElementById('hs-trailing-button-add-on').style.display = 'none';
+    document.getElementById('apply-button').style.display = 'none';
         
     }else{
         alert('At least booking 2 seats')
     }
     
-
+    
 
 
 });
