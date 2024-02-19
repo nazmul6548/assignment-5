@@ -157,21 +157,21 @@
        
      
      </main>
-     <main id="cdm-paribahan" class=" bg-[#F7F8F8] mt-16">
+     <main id="cdm-paribahan" class=" bg-[#F7F8F8] mt-16 border-t-2 border-[#1DD100] rounded-t-3xl">
          <section class="container mx-auto px-2 lg:px-24" >
              <div class="main-div">
                  <!-- <div> -->
                      <div class="text-center pt-24">
                          <h1 class="text-5xl font-bold pb-5">CDM Poribahan</h1>
-                         <p class="w-3/4 m-auto  pb-8">The service quality provided by CDM Paribahan reflects a commitment to passenger satisfaction, with emphasis placed on punctuality, cleanliness, and courteous staff interactions.</p>
+                         <p class="w-full lg:w-3/4 m-auto  pb-8">The service quality provided by CDM Paribahan reflects a commitment to passenger satisfaction, with emphasis placed on punctuality, cleanliness, and courteous staff interactions.</p>
                      </div>
                        <div>
-                         <div class="bg-white flex rounded-xl">
-                             <div class="w-[70%]">
-                                 <div class="flex  justify-between items-center pt-8 pl-10 pb-10">
+                         <div class="bg-white flex flex-col lg:flex-row rounded-xl">
+                             <div class="w-full lg:w-[70%]">
+                                 <div class="flex flex-col lg:flex-row  justify-between items-center pt-8 pl-10 pb-10">
                                  
                                      <div class="flex">
-                                         <img src="./images/bus-logo.png" alt="" class="w-[20%]">
+                                         <img src="./images/bus-logo.png" alt="" class="mt-5 lg:mt-0 w-[20%]">
                                          <div class="pl-3">
                                              <h3 class="text-3xl font-bold">CDM Paribahan</h3>
                                          <p>couch 009 -web ! ac business</p>
@@ -196,21 +196,21 @@
                                          <h1>10:00 PM</h1>
                                      </div>
                                      <hr>
-                                     <div class="pt-5 flex justify-around ">
-                                         <button class="bg-[#03071233] px-5 py-4 rounded-sm">dorpped poind chittagong</button>
-                                         <button class="bg-[#03071233] px-5 py-4 rounded-sm">bording point-jessore</button>
-                                         <button class="bg-[#03071233] px-5 py-4 rounded-sm">est,time-12 hours</button>
+                                     <div class="pt-5 flex flex-col lg:flex-row justify-around ">
+                                         <button class="bg-[#03071233] px-5 py-4 rounded-sm mt-5 lg:mt-0">dorpped poind chittagong</button>
+                                         <button class="bg-[#03071233] px-5 py-4 rounded-sm mt-5 lg:mt-0">bording point-jessore</button>
+                                         <button class="bg-[#03071233] px-5 py-4 rounded-sm mt-5 lg:mt-0">est,time-12 hours</button>
                                      </div>
                                  </div>
                              </div>
      
-                             <div>
+                             <div class="hidden lg:block">
                                  <img src="./images/info-devider.png" alt="">
                              </div>
      
      
      
-                             <div class="w-[30%] flex  flex-col items-center justify-center">
+                             <div class="w-full lg:w-[30%] flex  flex-col items-center justify-center">
                                  <img src="./images/fare.png" alt="" class="w-[10%]">
                                  <h1 class="text-2xl font-bold">550 tk</h1>
                                  <p class="text-2xl">Per Seat!</p>
@@ -225,8 +225,8 @@
             </section>
      
             <section class="container mx-auto px-2 lg:px-24 ">
-             <div class="flex bg-white rounded-2xl mt-10">
-                 <div class="left-side w-[60%]">
+             <div class="flex flex-col lg:flex-row bg-white rounded-2xl mt-10">
+                 <div class="left-side w-full lg:w-[60%]">
                      <h1 class="text-xl pb-3 mt-5 pl-5">Select your seat</h1>
                      <hr>
                      <div class="flex justify-between pt-3 pb-3 pl-5">
@@ -326,7 +326,7 @@
                  <!-- <div class="h-full border-3 border-dotted border-gray-900">
      
                  </div> -->
-                 <div class="right-side w-[40%]">
+                 <div class="right-side w-full lg:w-[40%]">
      
                      <h1 class="text-xl pb-3 mt-5 pl-16">Select your seat</h1>
                      <hr>
@@ -386,13 +386,16 @@
                            <input type="text" class="grow" placeholder="Username" />
                          </label>
                          <h2 class="font-bold">Phone Number*</h2>
-                         <label class="input input-bordered flex items-center gap-2">
-                           <input type="number" class="grow" placeholder="User Number" />
+                         <label  class="input input-bordered flex items-center gap-2">
+                           <input id="input-number" type="number" class="grow" placeholder="User Number" />
                          </label>
                        </div>
                        <div class="w-3/4 m-auto mt-4">
                          <button id="model" class="btn btn-wide w-full bg-[#1DD100]">Next</button>
-                         <p class="text-sm text-slate-400 pt-2"><a href="">term and condition</a></p>
+                         <div class="flex justify-between">
+                            <p class="text-sm text-slate-400 pt-2"><a href="#">term and condition</a></p>
+                            <p class="text-sm text-slate-400 pt-2"><a href="#">cancallation policy</a></p>
+                         </div>
                        </div>
      
                        
@@ -409,10 +412,10 @@
             
      </main>
      <footer id="footer-id" class=" bg-[#000] pt-16 pb-11 mt-16">
-         <footer class="footer p-10  text-base-content container mx-auto px-2 lg:px-24">
-             <nav>
+         <footer class="flex items-center justify-center flex-col lg:flex-row footer p-10  text-base-content container mx-auto px-2 lg:px-24">
+             <nav class="flex justify-center items-center  flex-col lg:items-start">
                <h6 class="footer-title text-3xl text-white">Bus Ticket</h6> 
-              <p class="w-2/4 text-white">Compare ticket prices, bus schedules, and amenities offered by different bus operators. Consider factors such as departure times, travel duration, and onboard facilities.</p>
+              <p class="w-full text-center lg:text-left lg:w-2/4 text-white">Compare ticket prices, bus schedules, and amenities offered by different bus operators. Consider factors such as departure times, travel duration, and onboard facilities.</p>
              </nav> 
             
              <nav>
@@ -420,10 +423,10 @@
              <img src="./Group 104.png" alt="" class="w-[70%]">
              </nav>
            </footer> 
-           <footer class="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300 container mx-auto px-2 lg:px-24 bg-[#000]">
+           <footer class="flex justify-center flex-col items-center text-center lg:justify-between lg:flex-row footer  px-10 py-4 border-t bg-base-200 text-base-content border-base-300 container mx-auto px-2 lg:px-24 bg-[#000]">
              <p class="text-white">@all the reserve bus ticket service limited</p>
              <nav class="md:place-self-center md:justify-self-end">
-               <div class="grid grid-flow-col gap-4 text-white">
+               <div class="grid grid-flow-row lg:grid-flow-col gap-4 text-white">
                  <p>Privacy Policy</p>
                  <p>return and refund policy</p>
                  <p>Privacy Policy</p>

@@ -138,8 +138,6 @@ applyButton.addEventListener('click',() => {
     }
     
     
-
-
 });
 
 
@@ -170,15 +168,7 @@ finalShowPic.addEventListener('click',() => {
 
 
 });
-// const finalShowPic2 = document.getElementById('continue-id');
-// finalShowPic.addEventListener('click',() => {
-//     const buttonCard = document.getElementById('continue-id').classList;
-//     buttonCard.remove('hidden');
-//     // console.log(buttonCard);
 
-
-// });
-// 
 const finalShowPic2 = document.getElementById('banner-card');
 finalShowPic.addEventListener('click',() => {
     const buttonCard = document.getElementById('main-div').classList;
