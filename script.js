@@ -2,6 +2,9 @@ const key = document.querySelectorAll(".kbd");
 let totalSeat =40;
 let counter = 0;
 let clickButtons =0;
+
+
+
 for (const btn of key) {
     let clickCount = 0;
     btn.addEventListener("click",() => {
@@ -17,14 +20,14 @@ for (const btn of key) {
 // console.log(btn);
 totalSeat--;
 document.getElementById('total-seat').innerText=totalSeat;
-if (totalSeat === 0) {
-    alert("All seats have been booked.")
+// if (totalSeat === 0) {
+//     alert("All seats have been booked.")
     
    
-}else if(totalSeat < 0){
-    alert('Seats are overbooked!')
+// }else if(totalSeat < 0){
+//     alert('Seats are overbooked!')
     
-}
+// }
 btn.style.backgroundColor="#1DD100";
 
 
@@ -75,6 +78,12 @@ clickCount++;
 
 
 
+  
+
+
+
+
+
 
 
 
@@ -85,11 +94,14 @@ applyButton.addEventListener('click',() => {
     // console.log("clicked");
     const couponElement = document.getElementById('hs-trailing-button-add-on').value;
     const couponCode =couponElement.split(' ').join('').toUpperCase();
-    console.log(couponCode);
+    const couponcode2 =couponElement.split(' ').join(' ');
+    
 
-  
-    if (counter >= 2) {
-        if (couponCode == "NEW15") {
+
+
+
+    if (totalSeat >= 4) {
+        if (couponCode === "NEW15") {
             const discountElement = document.getElementById('discount-cost');
             const discounAmount =finalCost * 0.15;
            
@@ -100,24 +112,29 @@ applyButton.addEventListener('click',() => {
             const afterDiscountPrice = document.getElementById('after-discount');
             afterDiscountPrice.innerText=finalCost - discounAmount.toFixed(2)
 
-            
-        }else if(couponCode == "COUPLE20") {
+            document.getElementById('hs-trailing-button-add-on').style.display = 'none';
+            document.getElementById('apply-button').style.display = 'none';
+        }else if(couponcode2 === "Couple 20") {
             const discountElement = document.getElementById('discount-cost');
             const discounAmount =finalCost * 0.2;
             
             discountElement.innerText="Discount Price: " + discounAmount.toFixed(2) + "tk";
 
             const afterDiscountPrice = document.getElementById('after-discount');
-            afterDiscountPrice.innerText=finalCost - discounAmount.toFixed(2)
+            afterDiscountPrice.innerText=finalCost - discounAmount.toFixed(2);
+            document.getElementById('hs-trailing-button-add-on').style.display = 'none';
+            document.getElementById('apply-button').style.display = 'none';
 
         }else{
             alert('invalid coupon');
+            return;
+            
         }
-        document.getElementById('hs-trailing-button-add-on').style.display = 'none';
-    document.getElementById('apply-button').style.display = 'none';
+     
         
     }else{
-        alert('At least booking 2 seats')
+        alert('At least booking 4 seats')
+        return;
     }
     
     
@@ -127,12 +144,9 @@ applyButton.addEventListener('click',() => {
 
 
 
-
-
-
-
     });
 }
+
 
 const finalShowPic = document.getElementById('model');
 finalShowPic.addEventListener('click',() => {
@@ -144,6 +158,10 @@ finalShowPic.addEventListener('click',() => {
 });
 
 
+
+
+
+
 const finalShowPic1 = document.getElementById('banner-card');
 finalShowPic.addEventListener('click',() => {
     const buttonCard = document.getElementById('main-div').classList;
@@ -152,11 +170,22 @@ finalShowPic.addEventListener('click',() => {
 
 
 });
-const finalShowPic2 = document.getElementById('continue-id');
+// const finalShowPic2 = document.getElementById('continue-id');
+// finalShowPic.addEventListener('click',() => {
+//     const buttonCard = document.getElementById('continue-id').classList;
+//     buttonCard.remove('hidden');
+//     // console.log(buttonCard);
+
+
+// });
+// 
+const finalShowPic2 = document.getElementById('banner-card');
 finalShowPic.addEventListener('click',() => {
-    const buttonCard = document.getElementById('continue-id').classList;
-    buttonCard.remove('hidden');
+    const buttonCard = document.getElementById('main-div').classList;
+    buttonCard.add('hidden');
     // console.log(buttonCard);
 
 
 });
+
+
