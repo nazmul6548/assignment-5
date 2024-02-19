@@ -75,12 +75,12 @@ for (const btn of key) {
       const couponcode2 = couponElement.split(" ").join(" ");
       
 
-      if (totalSeat >= 4) {
+      if (counter >= 4) {
         if (couponCode === "NEW15") {
           const discountElement = document.getElementById("discount-cost");
           const discounAmount = finalCost * 0.15;
-
-          discountElement.innerText =
+           console.log(discountElement);
+          
             "Discount Price: " + discounAmount.toFixed(2) + "tk";
 
           const afterDiscountPrice = document.getElementById("after-discount");
@@ -94,7 +94,7 @@ for (const btn of key) {
           const discountElement = document.getElementById("discount-cost");
           const discounAmount = finalCost * 0.2;
 
-          discountElement.innerText =
+          console.log(discountElement);
             "Discount Price: " + discounAmount.toFixed(2) + "tk";
 
           const afterDiscountPrice = document.getElementById("after-discount");
@@ -105,13 +105,25 @@ for (const btn of key) {
           document.getElementById("apply-button").style.display = "none";
         } else {
           alert("invalid coupon");
-          return;
+          
         }
+        return
       } else {
         alert("At least booking 4 seats");
-        return;
+        
       }
+
+     
+
+    
+       
+
+
+
+
+
     });
+    
   });
   
 }
@@ -137,3 +149,19 @@ finalShowPic.addEventListener("click", () => {
   buttonCard.add("hidden");
   // console.log(buttonCard);
 });
+const continues =document.getElementById('continue-id');
+continues.addEventListener("click", () => {
+    document.location.reload();
+});
+// 
+
+const inputNum = document.getElementById("input-number");
+const nextButton = document.getElementById("model");
+nextButton.disabled = true;
+
+inputNum.addEventListener("input", () => {
+    const phoneNum = inputNum.value.trim();
+    nextButton.disabled = phoneNum === "";
+});
+
+
